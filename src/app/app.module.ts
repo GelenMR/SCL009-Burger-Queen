@@ -12,7 +12,6 @@ import { KitchenComponent } from './components/kitchen/kitchen.component';
 import { MainComponent } from './components/main/main.component';
 import { BreakfastComponent } from './components/breakfast/breakfast.component';
 import { LunchComponent } from './components/lunch/lunch.component';
-import { AggregatesComponent } from './components/aggregates/aggregates.component';
 import { OrderComponent } from './components/order/order.component';
 import { ClientComponent } from './components/clients/client.component';
 //servicios
@@ -37,7 +36,6 @@ import { InformationOrderService } from './services/information-order.service';
     MainComponent,
     BreakfastComponent,
     LunchComponent,
-    AggregatesComponent,
     OrderComponent,
     ClientComponent,
     BtnMainBreakfastOrLunchComponent,
