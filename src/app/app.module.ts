@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ReactiveFormsModule } from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -19,11 +20,13 @@ import { ClientComponent } from './components/clients/client.component';
 
 //import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { ClientComponent } from './components/clients/client.component';
 //import { environment } from 'src/environments/environment';
 
 import { FormsModule } from '@angular/forms';
 import { BtnMainBreakfastOrLunchComponent } from './components/main/btn-main-breakfast-or-lunch/btn-main-breakfast-or-lunch.component'; // <-- NgModel lives here
 import { InformationOrderService } from './services/information-order.service';
+import { TemplateClientComponent } from './components/template-client/template-client.component';
 
   
 @NgModule({
@@ -36,9 +39,11 @@ import { InformationOrderService } from './services/information-order.service';
     MainComponent,
     BreakfastComponent,
     LunchComponent,
+   
     OrderComponent,
     ClientComponent,
     BtnMainBreakfastOrLunchComponent,
+    TemplateClientComponent,
   
   ],
   imports: [
@@ -47,12 +52,16 @@ import { InformationOrderService } from './services/information-order.service';
    // AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule
 
   ],
-  providers: [InformationOrderService
+  providers: [
+    
+    InformationOrderService
     
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [TemplateClientComponent]
 })
 export class AppModule { }
